@@ -19,7 +19,7 @@ import {
    
     <nav class="flex-1 p-4 space-y-2">
 
-      <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+      <!-- <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
         <HomeIcon class="w-5 h-5" />
         <span>Accueil</span>
       </a>
@@ -42,8 +42,23 @@ import {
       <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
         <ChartBarIcon class="w-5 h-5" />
         <span>Bilan</span>
-      </a>
-
+      </a> -->
+      <router-link to="/" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+        <HomeIcon class="w-5 h-5" /><span>Accueil</span>
+      </router-link>
+      <router-link to="/voiture" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+        <TruckIcon class="w-5 h-5" /><span>Voiture</span>
+      </router-link>
+      <router-link to="/client" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+         <UserIcon class="w-5 h-5" /><span>Client</span>
+      </router-link>
+      <router-link to="/achat" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+         <ShoppingCartIcon class="w-5 h-5" /><span>Achat</span>
+      </router-link>
+      <router-link to="/bilan" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+        <ChartBarIcon class="w-5 h-5" /><span>Bilan</span>
+      </router-link>
+ 
     </nav>
   </div>
 </template>

@@ -1,9 +1,10 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/navbar.vue';
-import Login from './views/login.vue';
+// import Layoutpardefaut from '../layout/layoutpardefaut.vue';
+import router from '../router/index.js';
 </script>
 
 <template>
-  <Navbar/>
+  <!-- <h1>hehe boy</h1> -->
+  <router-view/>
+  
 </template>

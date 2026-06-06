@@ -1,3 +1,3 @@
 <template>
-    <h1>client</h1>
+  <router-view />
 </template>
