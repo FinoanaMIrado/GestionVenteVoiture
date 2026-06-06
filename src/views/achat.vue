@@ -1,3 +1,11 @@
+<script setup>
+import bg from '../assets/bakg.png'
+</script>
 <template>
-    <h1>Achat</h1>
+    <div
+  class="w-full min-h-screen bg-cover bg-center flex items-center justify-center "
+  :style="{ backgroundImage: `url(${bg})` }"
+>
+
+</div>
 </template>

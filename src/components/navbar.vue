@@ -4,7 +4,10 @@ import {
   UserIcon,
   ShoppingCartIcon,
   ChartBarIcon,
-  TruckIcon
+  TruckIcon,
+  CurrencyDollarIcon,
+  ChartPieIcon,
+  PresentationChartBarIcon
 } from '@heroicons/vue/24/outline'
 </script>
 
@@ -43,8 +46,8 @@ import {
         <ChartBarIcon class="w-5 h-5" />
         <span>Bilan</span>
       </a> -->
-      <router-link to="/" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
-        <HomeIcon class="w-5 h-5" /><span>Accueil</span>
+      <router-link to="/acc" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
+        <PresentationChartBarIcon class="w-5 h-5" /><span>Bilan</span>
       </router-link>
       <router-link to="/voiture" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
         <TruckIcon class="w-5 h-5" /><span>Voiture</span>
@@ -55,10 +58,7 @@ import {
       <router-link to="/achat" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
          <ShoppingCartIcon class="w-5 h-5" /><span>Achat</span>
       </router-link>
-      <router-link to="/bilan" class="flex items-center gap-3 p-2 rounded hover:bg-gray-700">
-        <ChartBarIcon class="w-5 h-5" /><span>Bilan</span>
-      </router-link>
- 
+      
     </nav>
   </div>
 </template>

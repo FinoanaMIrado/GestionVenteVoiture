@@ -15,7 +15,7 @@
         Authentification
       </h1>
 
-      <form class="space-y-5">
+      <form class="space-y-5"> 
         <div>
           <label
             for="nomUser"
@@ -49,7 +49,7 @@
         </div>
 
         <button
-          type="submit"
+          @click="$router.push('/a')"
           class="w-full py-3 font-semibold text-white transition bg-gradient-to-r from-yellow-500 to-orange-600 p-8 rounded-lg text-white rounded-lg hover:bg-blue-700"
         >
           Se connecter

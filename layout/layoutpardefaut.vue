@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="flex h-screen">
     <Navbar />
 
-    <div class="content">
+    <main class="flex-1 overflow-y-auto">
       <router-view />
-    </div>
+    </main>
   </div>
 </template>
 

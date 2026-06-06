@@ -3,7 +3,7 @@ import Acceuil from '../src/views/acceuille.vue'
 import Voiture from '../src/views/voiture.vue'
 import Client from '../src/views/client.vue'
 import Achat from '../src/views/achat.vue'
-import Bilan from '../src/views/bilan.vue'
+// import Bilan from '../src/views/bilan.vue'
 import Login from '../src/views/login.vue'
 import Layoutpardefaut from '../layout/layoutpardefaut.vue'
 // import { Children } from 'vue'
@@ -12,7 +12,7 @@ import Layoutloginy from '../layout/layoutloginy.vue'
 
 const routes = [
   //Loginy
-    {path:'/login',
+    {path:'/',
     component: Layoutloginy,
     children:[
         {
@@ -23,12 +23,16 @@ const routes = [
     }   ,
     //Afisazy
    {
-      path: '/',
+
+    path: '/a',
     component: Layoutpardefaut,
     children :
-     [
-      {
+     [{
       path: '',
+      redirect: '/acc'   
+      },
+      {
+      path: '/acc',
       component: Acceuil,
       },
       {
@@ -43,10 +47,7 @@ const routes = [
       path: '/achat',
       component: Achat,
       },
-      {
-      path: '/bilan',
-      component: Bilan,
-      },
+      
      ]
    }
 ]
