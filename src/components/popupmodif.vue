@@ -31,7 +31,28 @@
                                 >
                             </div>
                         </div>
+                        <button
+                            @click="$router.push('/a')"
+                            class="w-full py-3 font-semibold text-white 
+                            transition bg-gradient-to-r from-green-500 
+                            to-green-400 p-8 rounded-lg text-white rounded-lg hover:bg-blue-700"
+                        >
+                            MODIFIER
+                        </button>
+                        <span>
+                           <button
+                          @click="$router.push('/a')"
+                            class="w-full py-3 font-semibold text-white 
+                            transition bg-gradient-to-r from-red-500 
+                            to-orange-600 p-8 rounded-lg text-white rounded-lg hover:bg-blue-700"
+                            >
+                            ANNULER
+                             </button>
+                        </span>
                 </form>  
+                <div id="mesage">
+                    <h2>! This is a message </h2>
+                </div>
             </div>
         </div>
     </div>
