@@ -1,5 +1,5 @@
 <template>
-    <div dir="rtl">
+    <div dir="">
         <div class="flex justify-center items-start bg-gray-200 w-[30%] h-[85vh]  border-style: solid; rounded-s-lg ">
         
             <div class="mt-15 flex flex-col">
@@ -9,7 +9,7 @@
                             <div>
                                 <label for="num"
                                 class="block mb-2 text-sm font-medium text-gray-700 text-left"
-                                >:IDClient</label>
+                                >IDClient : </label>
                                 <input type="text" placeholder="CLI001"
                                 class="text-left w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                                 >
@@ -17,7 +17,7 @@
                             <div>
                                 <label for="nom" 
                                 class="block mb-2 text-sm font-medium text-gray-700 text-left"
-                                >:Nom du Client </label>
+                                >Nom du Client :</label>
                                 <input type="text" placeholder="Rakoto"
                                 class="text-left w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                                 >
@@ -25,8 +25,8 @@
                             <div>
                                 <label for="Contact"
                                 class="block mb-2 text-sm font-medium text-gray-700 text-left"
-                                >:Contact </label>
-                                <input type="text" placeholder="+26000000000"
+                                >Contact : </label>
+                                <input type="text" placeholder=" +2613********"
                                 class="text-left w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                                 >
                             </div>
@@ -51,7 +51,7 @@
                         </span>
                 </form>  
                 <div id="mesage">
-                    <h2>! This is a message </h2>
+                    <h2>  </h2>
                 </div>
             </div>
         </div>
