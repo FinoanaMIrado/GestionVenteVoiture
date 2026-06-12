@@ -1,5 +1,8 @@
+<script setup>
+import bg from '../assets/bakg.png'
+</script>
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="flex items-center justify-center min-h-screen " :style="{ backgroundImage: `url(${bg})` }">
     <div class="w-full max-w-md p-8 bg-white rounded-xl shadow-lg">
       <div className="flex justify-center items-start">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
