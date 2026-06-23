@@ -3,6 +3,7 @@ import Acceuil from '../src/views/acceuille.vue'
 import Voiture from '../src/views/voiture.vue'
 import Client from '../src/views/client.vue'
 import Achat from '../src/views/achat.vue'
+import Facture from '../src/views/facture.vue'
 // import Bilan from '../src/views/bilan.vue'
 import Login from '../src/views/login.vue'
 import Layoutpardefaut from '../layout/layoutpardefaut.vue'
@@ -46,6 +47,10 @@ const routes = [
       {
       path: '/achat',
       component: Achat,
+      },
+      {
+      path: '/facture/:id',
+      component: Facture,
       },
       
      ]

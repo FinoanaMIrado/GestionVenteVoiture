@@ -1,0 +1,12 @@
+-- The achat table already exists with this schema.
+-- If you need to recreate it:
+-- DROP TABLE IF EXISTS achat;
+-- CREATE TABLE achat (
+--     numAchat INT AUTO_INCREMENT PRIMARY KEY,
+--     idcli VARCHAR(50) NOT NULL,
+--     idvoit VARCHAR(50) NOT NULL,
+--     date DATETIME DEFAULT CURRENT_TIMESTAMP,
+--     qte INT NOT NULL DEFAULT 1,
+--     FOREIGN KEY (idcli) REFERENCES client(idcli) ON DELETE CASCADE,
+--     FOREIGN KEY (idvoit) REFERENCES voiture(idvoit) ON DELETE CASCADE
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

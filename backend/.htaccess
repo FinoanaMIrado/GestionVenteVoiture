@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ cors_preflight.php [L]

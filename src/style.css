@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media print {
+    body { background: white !important; }
+    .flex.h-screen > div:first-child { display: none !important; }
+    .flex.h-screen > main { margin: 0 !important; padding: 0 !important; }
+}
