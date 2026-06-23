@@ -1,15 +1,79 @@
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const username = ref('')
+const password = ref('')
+const confirmPassword = ref('')
+const error = ref('')
+const loading = ref(false)
+const isRegister = ref(false)
+
+function basculerMode() {
+  isRegister.value = !isRegister.value
+  error.value = ''
+}
+
+async function seConnecter() {
+  error.value = ''
+  loading.value = true
+  try {
+    const r = await fetch('http://localhost/backend/login.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({ username: username.value, password: password.value })
+    })
+    const data = await r.json()
+    if (data.success) {
+      router.push('/acc')
+    } else {
+      error.value = data.error || 'Identifiants incorrects'
+    }
+  } catch {
+    error.value = 'Erreur de connexion au serveur'
+  } finally {
+    loading.value = false
+  }
+}
+
+async function creerCompte() {
+  error.value = ''
+  if (password.value !== confirmPassword.value) {
+    error.value = 'Les mots de passe ne correspondent pas'
+    return
+  }
+  loading.value = true
+  try {
+    const r = await fetch('http://localhost/backend/auth/register.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username: username.value, password: password.value })
+    })
+    const data = await r.json()
+    if (data.success) {
+      isRegister.value = false
+      error.value = 'Compte créé ! Connectez-vous.'
+    } else {
+      error.value = data.error || 'Erreur lors de la création'
+    }
+  } catch {
+    error.value = 'Erreur de connexion au serveur'
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-full max-w-md p-8 bg-white rounded-xl shadow-lg">
-      <div className="flex justify-center items-start">
+      <div class="flex justify-center items-start">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-        width="80"
-        height="80"
-        strokeWidth={1.5} stroke="currentColor" className="size-3">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        width="80" height="80" stroke-width="1.5" stroke="currentColor" class="size-3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </svg><br>
-
-
       </div>
       <h1 class="mb-6 text-2xl font-semibold text-center text-gray-800 dark:text-white">
         {{ isRegister ? 'Créer un compte' : 'Authentification' }}
