@@ -12,3 +12,14 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 L'application facilite la gestion commerciale d'un concessionnaire automobile en centralisant les informations relatives aux véhicules, aux clients et aux transactions.
 
 ---
+## Objectifs du projet
+
+- Gérer les informations des clients
+- Gérer le catalogue des voitures disponibles
+- Enregistrer les achats de véhicules
+- Mettre à jour automatiquement le stock après chaque vente
+- Générer des factures en format PDF
+- Consulter l'historique des achats
+- Produire des statistiques sur les recettes mensuelles
+
+---
