@@ -106,3 +106,36 @@ L'application manipule les tables suivantes :
 - Mise à jour automatique du stock
 - Historique des achats
 - Consultation de toutes les ventes
+### 🔍 Recherche
+
+- Recherche d'une voiture par :
+  - Identifiant
+  - Désignation (avec l'opérateur **LIKE**)
+
+### 🧾 Facturation
+
+- Génération automatique de la facture après un achat
+- Affichage du détail :
+  - Informations du client
+  - Véhicule acheté
+  - Quantité
+  - Prix unitaire
+  - Montant total
+
+### 📄 Génération PDF
+
+- Export de la facture au format PDF
+- Impression de la facture
+
+### 📅 Recherche par période
+
+- Recherche des achats effectués entre deux dates
+
+### 📊 Tableau de bord
+
+Affichage des recettes totales des **6 derniers mois** :
+
+- Total des ventes par mois
+- Suivi des performances commerciales
+
+---
