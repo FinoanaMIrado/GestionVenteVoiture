@@ -46,3 +46,33 @@ L'application facilite la gestion commerciale d'un concessionnaire automobile en
 - **Git & GitHub**
 
 ---
+## Base de données
+
+L'application manipule les tables suivantes :
+
+### CLIENT
+
+| Champ | Type |
+|-------|------|
+| idcli | String |
+| nom | String |
+| contact | String |
+
+### VOITURE
+
+| Champ | Type |
+|-------|------|
+| idvoit | String |
+| design | String |
+| prix | Integer |
+| nombre | Integer |
+
+### ACHAT
+
+| Champ | Type |
+|-------|------|
+| numAchat | String |
+| idcli | String |
+| idvoit | String |
+| date | Date |
+| qte | Integer |
