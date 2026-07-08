@@ -23,3 +23,26 @@ L'application facilite la gestion commerciale d'un concessionnaire automobile en
 - Produire des statistiques sur les recettes mensuelles
 
 ---
+## Technologies utilisées
+
+### Frontend
+
+- **Vue.js** : Développement de l'interface utilisateur
+- **Tailwind CSS** : Création d'une interface moderne et responsive
+- **Heroicons** : Bibliothèque d'icônes SVG
+
+### Backend
+
+- **PHP** : Développement de l'API et de la logique métier
+
+### Base de données
+
+- **MySQL** : Gestion et stockage des données
+
+### Outils
+
+- **Visual Studio Code**
+- **XAMPP / WAMP**
+- **Git & GitHub**
+
+---
