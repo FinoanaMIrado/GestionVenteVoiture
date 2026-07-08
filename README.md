@@ -139,3 +139,4 @@ Affichage des recettes totales des **6 derniers mois** :
 - Suivi des performances commerciales
 
 ---
+## FINOANA MIRADO X ANT-SA ANDRIAMISAINA
