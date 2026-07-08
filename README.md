@@ -76,3 +76,33 @@ L'application manipule les tables suivantes :
 | idvoit | String |
 | date | Date |
 | qte | Integer |
+
+> **Remarque :**
+>
+> À chaque enregistrement d'un achat, la quantité disponible (`nombre`) de la voiture est automatiquement décrémentée en fonction de la quantité achetée.
+
+---
+
+## Fonctionnalités principales
+
+### 👤 Gestion des clients
+
+- Ajouter un client
+- Modifier un client
+- Supprimer un client
+- Consulter la liste des clients
+
+### 🚗 Gestion des voitures
+
+- Ajouter une voiture
+- Modifier les informations d'une voiture
+- Supprimer une voiture
+- Consulter les véhicules disponibles
+- Gestion automatique du stock
+
+### 🛒 Gestion des achats
+
+- Enregistrer un achat
+- Mise à jour automatique du stock
+- Historique des achats
+- Consultation de toutes les ventes
