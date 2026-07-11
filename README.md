@@ -139,4 +139,89 @@ Affichage des recettes totales des **6 derniers mois** :
 - Suivi des performances commerciales
 
 ---
+# Base de données
+
+La base de données **GESTIONVENTEVOITURE** est composée de cinq tables principales permettant la gestion des clients, des voitures, des achats, des factures et des utilisateurs.
+
+## Tables
+
+### Client
+Contient les informations des clients.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| idcli | VARCHAR(255) (PK) | Identifiant du client |
+| nom | VARCHAR(255) | Nom du client |
+| contact | VARCHAR(255) | Contact du client |
+
+---
+
+### Voiture
+Contient les informations des voitures disponibles.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| idvoit | VARCHAR(255) (PK) | Identifiant de la voiture |
+| Design | VARCHAR(255) | Désignation de la voiture |
+| prix | INT | Prix unitaire |
+| nombre | INT | Quantité disponible |
+
+---
+
+### Achat
+Enregistre les achats de voitures effectués par les clients.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| numAchat | VARCHAR(20) (PK) | Identifiant de l'achat |
+| idcli | VARCHAR(20) (FK) | Client concerné |
+| idvoit | VARCHAR(20) (FK) | Voiture achetée |
+| date | DATE | Date de l'achat |
+| qte | INT | Quantité achetée |
+
+---
+
+### Facture
+Stocke les factures générées après un achat.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| NumFact | VARCHAR(20) (PK) | Numéro de facture |
+| DateFact | DATE | Date de la facture |
+| NumAchat | VARCHAR(20) (FK) | Achat associé |
+
+---
+
+### Utilisateur
+Permet l'authentification dans l'application.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| NumeroUtilisateur | INT (PK) | Identifiant de l'utilisateur |
+| nomUtilisateur | VARCHAR(250) | Nom d'utilisateur |
+| motDePasse | VARCHAR(500) | Mot de passe |
+
+## Relations entre les tables
+
+```text
+Client
+   │
+   └── Achat ─── Voiture
+          │
+          └── Facture
+```
+
+## Clés primaires
+
+- Client : `idcli`
+- Voiture : `idvoit`
+- Achat : `numAchat`
+- Facture : `NumFact`
+- Utilisateur : `NumeroUtilisateur`
+
+## Clés étrangères
+
+- `Achat.idcli` → `Client.idcli`
+- `Achat.idvoit` → `Voiture.idvoit`
+- `Facture.NumAchat` → `Achat.numAchat`
 ## FINOANA MIRADO X ANT-SA ANDRIAMISAINA
